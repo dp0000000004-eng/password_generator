@@ -1,16 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>
-            Pass Gen
-        </title>
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <h3 id="errorMsg" style="color:red;" ></h3>
-        <label>Password Size</label><br>
-        <input id="inputEl" name="size" placeholder="Enter the size of password"><br>
-        <button id="enterSizeBtn">Enter</button>
-        <script src="index.js"></script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>onwater</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="shell">
+        <div class="ripple r1"></div>
+        <div class="ripple r2"></div>
+        <div class="ripple r3"></div>
+
+        <header class="brand">
+            <div>
+                <h1>OnWaTer</h1>
+                <p>No more weak password</p>
+            </div>
+        </header>
+
+        <label class="length">
+            <span class="length-row">
+                <span>length</span>
+                <output id="sizeValue" for="inputEl">16</output>
+            </span>
+            <input id="inputEl" type="range" min="8" max="48" value="16" name="size">
+        </label>
+
+        <p id="errorMsg" class="error" hidden></p>
+
+        <button id="enterSizeBtn" type="button">Generate</button>
+
+        <section class="result" aria-live="polite">
+            <p id="displayEl" class="password">your tide is still</p>
+            <button id="copyBtn" type="button" class="ghost" disabled>copy</button>
+        </section>
+
+        <svg class="wave" viewBox="0 0 360 48" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 24c40 12 80-12 120 0s80 12 120 0 80-12 80 0v24H0z" fill="rgba(180,232,255,.18)"/>
+            <path d="M0 32c50 10 70-10 120 0s80 10 120 0 54-8 80 0v16H0z" fill="rgba(120,210,240,.22)"/>
+        </svg>
+    </div>
+
+    <script src="index.js"></script>
+</body>
 </html>

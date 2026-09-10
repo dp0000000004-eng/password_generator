@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Paasword Generator",
+  "version": "1.0",
+  "description": "Create a SuperStrong Password",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "OnWaTer.png"
+    }
+  },
+  "permissions": ["tabs", "storage"]
+}
